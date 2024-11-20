@@ -3,20 +3,23 @@
   "main": "app/app.ts",
   "version": "1.0.0",
   "private": true,
-  "nativescript": {
-    "id": "com.rtmpvirtualcamera.app"
-  },
   "dependencies": {
-    "@nativescript/core": "~8.6.0",
-    "@nativescript/theme": "~3.0.2",
-    "@nativescript/android": "8.6.2",
+    "@nativescript/core": "~8.8.6",
+    "@nativescript/theme": "~3.1.0",
+    "@nativescript/android": "8.8.6",
     "nativescript-videoplayer": "^5.0.1",
     "@nstudio/nativescript-exoplayer": "^6.2.0"
   },
   "devDependencies": {
-    "@nativescript/android": "8.6.2",
-    "@nativescript/types": "~8.6.0",
-    "@nativescript/webpack": "~5.0.18",
-    "typescript": "~5.2.0"
+    "@nativescript/android": "8.8.6",
+    "@nativescript/types": "~8.8.0",
+    "@nativescript/types-android": "8.8.0",
+    "@nativescript/types-ios": "8.8.0",
+    "@nativescript/webpack": "~5.0.22",
+    "typescript": "~5.6.0"
+  },
+  "nativescript": {
+    "id": "com.rtmpvirtualcamera.app",
+    "version": "1.0.0"
   }
 }

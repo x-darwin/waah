@@ -1,0 +1,19 @@
+android {
+  defaultConfig {
+    minSdkVersion 21
+    targetSdkVersion 33
+    compileSdkVersion 33
+    generatedDensities = []
+  }
+  aaptOptions {
+    additionalParameters "--no-version-vectors"
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+}
+
+dependencies {
+  implementation "androidx.multidex:multidex:2.0.1"
+}

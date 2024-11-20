@@ -1,17 +1,20 @@
 import { android as androidApp } from '@nativescript/core/application';
 
+declare const android: any;
+declare const com: any;
+
 @JavaProxy('com.rtmpvirtualcamera.VirtualCameraService')
 export class VirtualCameraService extends android.app.Service {
-    private mediaProjection: android.media.projection.MediaProjection;
-    private virtualDisplay: android.hardware.display.VirtualDisplay;
-    private mediaRecorder: android.media.MediaRecorder;
+    private mediaProjection: any;
+    private virtualDisplay: any;
+    private mediaRecorder: any;
     private rtmpUrl: string;
 
     onCreate() {
         super.onCreate();
     }
 
-    onStartCommand(intent: android.content.Intent, flags: number, startId: number): number {
+    onStartCommand(intent: any, flags: number, startId: number): number {
         this.rtmpUrl = intent.getStringExtra("rtmpUrl");
         const resultCode = intent.getIntExtra("resultCode", 0);
         const data = intent.getParcelableExtra("data");
@@ -79,7 +82,7 @@ export class VirtualCameraService extends android.app.Service {
         super.onDestroy();
     }
 
-    onBind(intent: android.content.Intent): android.os.IBinder {
+    onBind(intent: any): any {
         return null;
     }
 }

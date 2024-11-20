@@ -1,5 +1,8 @@
 import { Observable } from '@nativescript/core';
 import { android as androidApp } from '@nativescript/core/application';
+import { isAndroid } from '@nativescript/core/platform';
+
+declare const android: any;
 
 export class MainViewModel extends Observable {
     private _rtmpUrl: string;
@@ -37,6 +40,11 @@ export class MainViewModel extends Observable {
     startVirtualCamera() {
         if (!this._rtmpUrl) {
             this.status = "Please enter RTMP URL";
+            return;
+        }
+
+        if (!isAndroid) {
+            this.status = "This feature is only available on Android";
             return;
         }
 
