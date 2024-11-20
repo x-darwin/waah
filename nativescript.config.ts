@@ -6,6 +6,10 @@ export default {
   appResourcesPath: 'App_Resources',
   android: {
     v8Flags: '--expose_gc',
-    markingMode: 'none'
+    markingMode: 'none',
+    maxLogcatObjectSize: 2048,
+    codeCache: true,
+    discardUncaughtJsExceptions: true,
+    enableMultithreadedJavascript: true
   }
 } as NativeScriptConfig;
